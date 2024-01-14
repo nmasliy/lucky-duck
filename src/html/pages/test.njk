@@ -1,0 +1,22 @@
+{% extends "../templates/layouts/layout.njk" %}
+{% block content %}
+<div class="text-section">
+  <div class="container">
+    <div><a href="./index.html" target="_blank">Главная</a></div>
+    <div><a href="./services.html" target="_blank">Услуги</a></div>
+    <div><a href="./prices.html" target="_blank">Цены</a></div>
+    <div><button class="btn-gradient" data-modal-open="modal-form">Модальное окно</button></div>
+
+    {% for i in range(0, 10) -%}
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
+      quisquam quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
+      quisquam quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
+      quisquam quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
+    </p>
+    {%- endfor %}
+  </div>
+</div>
+{% endblock content %}

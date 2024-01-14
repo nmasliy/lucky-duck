@@ -1,0 +1,191 @@
+.pluses {
+  &__wrapper {
+    @include wrapper;
+
+    &::before {
+      @include circle(424px, $secondary, 0.5, 137px);
+
+      content: "";
+      position: absolute;
+      right: -65px;
+      top: -70px;
+      z-index: -1;
+    }
+  }
+
+  &__inner {
+    border-radius: 10px;
+    padding: 67px 58px 80px;
+    color: $black;
+    background: $white;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    max-width: 830px;
+
+    .break {
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 43px;
+  }
+
+  &__list {
+    @include grid(2, 40px 48px);
+
+    counter-reset: pluses;
+  }
+
+  &__item {
+    counter-increment: pluses;
+    position: relative;
+    display: flex;
+
+    &::before {
+      content: counter(pluses);
+      position: relative;
+      top: -6px;
+      display: block;
+      flex-shrink: 0;
+      margin-right: 20px;
+      width: 55px;
+      font-family: $font-secondary;
+      font-weight: 300;
+      font-size: 70px;
+      color: $primary;
+    }
+  }
+
+  &__name {
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &__bg {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 214px;
+      height: 221px;
+      background: url("../img/stars-decor.svg") center / cover no-repeat;
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .pluses {
+    &__item {
+      &::before {
+        font-size: 66px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .pluses {
+    &__item {
+      &::before {
+        font-size: 62px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .pluses {
+    &__list {
+      gap: 24px;
+    }
+
+    &__bg {
+      display: none;
+    }
+
+    &__inner {
+      padding: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pluses {
+    &__list {
+      display: block;
+    }
+
+    &__subtitle {
+      margin-bottom: 26px;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__title {
+      max-width: 475px;
+
+      .break {
+        display: none;
+      }
+    }
+
+    &__item {
+      @include mb(20px);
+
+      &::before {
+        width: 45px;
+        font-size: 56px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pluses {
+    &__title {
+      max-width: 355px;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .pluses {
+    &__item::before {
+      width: 34px;
+      font-size: 44px;
+    }
+
+    &__inner {
+      padding: 30px 24px;
+    }
+
+    &__title {
+      max-width: 316px;
+
+      &::after {
+        top: -5px;
+      }
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+  }
+}

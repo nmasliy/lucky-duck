@@ -1,0 +1,17 @@
+@mixin circle($size: 424px, $color: $primary, $opacity: 0.5, $blur: 135px) {
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  background-color: $color;
+  opacity: $opacity;
+  filter: blur($blur);
+  will-change: filter;
+}
+
+@mixin triangle($size: 20px) {
+  border-style: solid;
+  border-width: 0 $size $size 0;
+  border-color: transparent $accent transparent transparent;
+  width: 0;
+  height: 0;
+}

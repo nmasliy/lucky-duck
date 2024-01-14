@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru">
+  
+    <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Unbounded:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+  
+  <body>
+    <div class="page-wrapper">
+      
+        <header class="header">
+  <div class="header__wrapper">
+    <div class="container">
+      <div class="header__top">
+        <div class="header__logo">
+          <a href="./">
+            <img src="img/logo.svg" width="165" height="90" alt="Логотип">
+          </a>
+        </div>
+        <div class="header__menu menu">
+          <nav class="header__nav nav">
+            <ul class="header__list">
+              <li><a href="./">Главная</a></li>
+              <li><a href="./services.html">Услуги</a></li>
+              <li><a href="#promotions">Акции</a></li>
+              <li><a href="./prices.html">Цены</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+          <button class="header__btn btn-outline" data-modal-open="modal-form">заказать звонок</button>
+        </div>
+        <div class="header__phone-wrapper">
+          <a class="header__phone" href="tel:+78312119483">+7 (831) 211-94-83</a>
+        </div>
+        <button class="header__burger burger">
+          <span></span>
+        </button>
+      </div>
+      <div class="header__body">
+        <div class="header__side">
+          <div class="header__info">
+            <div class="header__info-item header__info-schedule">Работаем с 10:00 - <br /> 20:00,без выходных</div>
+            <div class="header__info-item header__info-address">Нижний Новгород <br /> ул. Родионова 190Д</div>
+          </div>
+          <div class="header__stories">
+            <p class="header__stories-title">Наши Stories</p>
+            <ul>
+              <li><img src="img/stories-1.svg" width="93" height="93" alt="Акции"></li>
+              <li><img src="img/stories-2.svg" width="93" height="93" alt="Цены"></li>
+              <li><img src="img/stories-3.svg" width="93" height="93" alt="Портфолио"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__content">
+          <div class="header__content-row">
+            <div class="header__content-col">
+              <div class="header__img">
+                <img src="img/header-1.png" width="679" height="705" alt="Утка">
+              </div>
+            </div>
+            <div class="header__content-col">
+              <h1 class="header__title title">Профессиональный <span class="accent">детейлинг</span> в Нижнем Новгороде</h1>
+              <div class="header__form header-form">
+                <form>
+                  <div class="header-form__title">Запишитесь на консультацию обсудим план работ над автомобилем вместе</div>
+                  <div class="header-form__inner">
+                    <input class="header-form__control form-control" type="text" placeholder="Ваше имя">
+                    <input class="header-form__control form-control" type="tel" placeholder="Номер телефона +7">
+                    <button class="header-form__btn btn-gradient">Получить консультацию</button>
+                    <label class="header-form__policy form-check">
+                      <input class="visually-hidden" checked type="checkbox">
+                      <span class="form-check__circle"></span>
+                      <span>Даю согласие <a href="#">на обработку персональных данных</a></span>
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__benefits">
+        <ul>
+          <li>
+            <p><span class="text-gradient"><b>Более 3 000</b> автовладельцев стали нашими клиентами</span></p>
+          </li>
+          <li>
+            <p><b class="primary">8 лет</b> на рынке детейлинга</p>
+          </li>
+          <li>
+            <p>Мастера с опытом работы строго <b class="primary">от 10 лет</b></p>
+          </li>
+          <li>
+            <p>Клиентская зона и охраняемая парковка</p>
+          </li>
+          <li>
+            <p><b class="primary">60+</b> отзывов с рейтингом <b class="primary">4.7</b></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header__bg" style="background-image: url('img/header-bg.png');"></div>
+</header>
+
+      
+      <main class="main">
+        
+<section class="services section">
+  <div class="services__wrapper">
+    <div class="container">
+      <div class="services__inner">
+        <div class="services__title title title--icon">
+          <h2 class="title__wrapper"><span class="secondary">Luck</span> Услуги</h2>
+        </div>
+        <ul class="services__list">
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-1.webp" type="image/webp">
+                <img src="img/services-1.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Полировка</p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-2.webp" type="image/webp">
+                <img src="img/services-2.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Химчистка</p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-3.webp" type="image/webp">
+                <img src="img/services-3.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Детейлинг-мойка</p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-4.webp" type="image/webp">
+                <img src="img/services-4.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Шумоизоляция</p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-5.webp" type="image/webp">
+                <img src="img/services-5.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Установка системы ТОР для звука выхлопа</p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-6.webp" type="image/webp">
+                <img src="img/services-6.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Нанесение керамики</p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-7.webp" type="image/webp">
+                <img src="img/services-7.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Ионизация салона (установка системы)</p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-8.webp" type="image/webp">
+                <img src="img/services-8.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Оклейка пленкой</p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-9.webp" type="image/webp">
+                <img src="img/services-9.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Удаление вмятин </p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-10.webp" type="image/webp">
+                <img src="img/services-10.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Установка музыки </p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-11.webp" type="image/webp">
+                <img src="img/services-11.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Установка доводчиков дверей</p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="services__item">
+            <a class="services__img" href="#">
+              <picture>
+                <source srcset="img/services-12.webp" type="image/webp">
+                <img src="img/services-12.jpg" width="339" height="199" alt="услуга" loading="lazy">
+              </picture>
+            </a>
+            <div class="services__info">
+              <p class="services__name">Установка подсветки салона</p>
+              <p class="services__price">от <span>100 000 руб.</span></p>
+              <div class="services__buttons">
+                <button class="services__btn btn-primary" data-modal-open="modal-form">заказать</button>
+                <a class="services__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lead section">
+  <div class="lead__wrapper">
+    <div class="container">
+      <div class="lead__inner">
+        <div class="lead__content">
+          <div class="lead__title title title--icon">
+            <h2 class="title__wrapper">Если не нашли <br /> <span class="secondary">нужную услугу</span></h2>
+          </div>
+          <div class="lead__text">
+            <p class="lead__text-line">Свяжитесь с нами по телефону</p>
+            <p class="lead__text-line"><a class="lead__phone" href="tel:+7831211948">+7 (831) 211-94-83</a></p>
+            <div class="lead__text-line lead__text-socials">
+              <p>или в социальных сетях</p>
+              <ul>
+                <li><a href="#"><img src="img/whatsapp-icon.svg" width="55" height="55" alt="Связаться в Whatsapp" title="Связаться в Whatsapp"></a></li>
+                <li><a href="#"><img src="img/telegram-icon.svg" width="55" height="55" alt="Связаться в Telegram" title="Связаться в Telegram"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lead__caption">мы подберём работы для&nbsp;вашей машины</div>
+        </div>
+        <div class="lead__img">
+          <picture>
+            <source srcset="img/lead-1.webp" type="image/webp">
+            <img src="img/lead-1.png" width="720" height="773" alt="заказать звонок">
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="lead__bg"></div>
+  </div>
+</section>
+
+<section class="works section">
+  <div class="works__wrapper">
+    <div class="container">
+      <div class="works__inner">
+        <div class="works__title title title--icon">
+          <h3 class="title__wrapper">Примеры <br /> <span class="secondary">работ</span></h3>
+        </div>
+        <ul class="works__list">
+          <li class="works__item">
+            <div class="works__img">
+              <picture>
+                <source srcset="img/works-1.webp" type="image/webp">
+                <img src="img/works-1.jpg" width="341" height="264" alt="Пример работы" loading="lazy">
+              </picture>
+            </div>
+            <div class="works__info">
+              <p class="works__name">Оклейка MCLaren антигравийной пленкой</p>
+              <p class="works__text">Вы хотите сохранить идеальное состояние своего McLaren 720s на долгие годы? SA CarLounge, ведущий детейлинг…</p>
+              <div class="works__buttons">
+                <a class="works__btn btn-primary" href="#">узнать цену</a>
+                <a class="works__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="works__item">
+            <div class="works__img">
+              <picture>
+                <source srcset="img/works-2.webp" type="image/webp">
+                <img src="img/works-2.jpg" width="341" height="264" alt="Пример работы" loading="lazy">
+              </picture>
+            </div>
+            <div class="works__info">
+              <p class="works__name">Защита передней части авто пленкой LLumar PPF Gloss</p>
+              <p class="works__text">На этот раз рассказ про новый BMW5 в кузове G30, который приехал к нам сразу после покупки. Владелец…</p>
+              <div class="works__buttons">
+                <a class="works__btn btn-primary" href="#">узнать цену</a>
+                <a class="works__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="works__item">
+            <div class="works__img">
+              <picture>
+                <source srcset="img/works-3.webp" type="image/webp">
+                <img src="img/works-3.jpg" width="341" height="264" alt="Пример работы" loading="lazy">
+              </picture>
+            </div>
+            <div class="works__info">
+              <p class="works__name">Восстановление оконных молдингов Mercedes-Benz W222 Maybach</p>
+              <p class="works__text">Совершенство складывается из мелочей (с). Очередной Mercedes-Benz W222 Maybach, на котором мы восстановили…</p>
+              <div class="works__buttons">
+                <a class="works__btn btn-primary" href="#">узнать цену</a>
+                <a class="works__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+          <li class="works__item">
+            <div class="works__img">
+              <picture>
+                <source srcset="img/works-4.webp" type="image/webp">
+                <img src="img/works-4.jpg" width="341" height="264" alt="Пример работы" loading="lazy">
+              </picture>
+            </div>
+            <div class="works__info">
+              <p class="works__name">Полная шумоизоляция Mercedes-Benz V-Сlass</p>
+              <p class="works__text">Многие из вас спрашивали и хотели, но мы в большинстве случаев отказывали. Из-за отсутствия времени,…</p>
+              <div class="works__buttons">
+                <a class="works__btn btn-primary" href="#">узнать цену</a>
+                <a class="works__link link-wavy" href="#">подробнее</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a class="works__btn btn-gradient" href="#">Все работы</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="video section">
+  <div class="video__media">
+    <video src="video/main-video.mp4" poster="img/video-poster.jpg" loading="lazy" autoplay playsinline muted loop></video>
+    <div class="video__lines-top"></div>
+    <div class="video__lines-bottom"></div>
+  </div>
+</section>
+
+<section class="about section">
+  <div class="about__wrapper">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__img">
+          <picture>
+            <source srcset="img/about-1.webp" type="image/webp">
+            <img src="img/about-1.jpg" alt="Кто мы?" width="463" height="700">
+          </picture>
+        </div>
+        <div class="about__content">
+          <div class="about__title title title--icon">
+            <h3 class="title__wrapper">Lucky Duck <br /> <span class="secondary">Кто мы?</span></h3>
+          </div>
+          <div class="about__row">
+            <div class="about__col about__left">
+              <div class="about__logo-wrapper">
+                <div class="about__logo">
+                  <img src="img/about-logo.svg" width="175" height="166" alt="Lucky Duck">
+                </div>
+                <button class="about__btn btn-gradient" data-modal-open="modal-form">Записаться</button>
+              </div>
+            </div>
+            <div class="about__col about__right">
+              <div class="about__box">
+                <p class="about__box-title">Всегда видимый результат</p>
+                <p>Вы обязательно увидите разницу во внешнем виде машины после посещения нашей студии. А возможно — даже ее не узнаете!</p>
+              </div>
+              <div class="about__box">
+                <p class="about__box-title">Быстро, но без спешки</p>
+                <p>Каждый автомобиль — индивидуален. У нас не конвейер, потратим времени столько, сколько необходимо для наилучшего результата.</p>
+              </div>
+              <div class="about__box">
+                <p class="about__box-title">Безопасность и гарантия</p>
+                <p>Помещение находится под круглосуточной охраной. Даем гарантию на все выполненные работы и материалы. Наше стремление превзойти ожидания подтверждается блестящими отзывами наших довольных клиентов.</p>
+              </div>
+              <div class="about__info-footer">
+                <p>Многолетний опыт надежного обслуживания. Благодаря многолетнему опыту компания Lucky Duck стала именем, которому доверяют в отрасли. Наши постоянные клиенты возвращаются к нам, чтобы получить безупречную чистоту и ухоженный автомобиль.</p>
+                <p>Профессиональная команда. В нашу команду входят автолюбители, которые подходят к каждому автомобилю со страстью и внимательным взглядом на детали. От обычной чистки до специализированного ухода – мы относимся к каждому автомобилю как к своему собственному. Используем новейшие технологии и продукты премиум-класса. Ваш автомобиль получает первоклассный уход как внутри, так и снаружи.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about__bg"></div>
+  </div>
+</section>
+
+<section class="promotions section" id="promotions">
+  <div class="promotions__wrapper">
+    <div class="container">
+      <div class="promotions__inner">
+        <div class="promotions__title title title--icon">
+          <h3 class="title__wrapper">Lucky <span class="secondary"> Акции</span></h3>
+        </div>
+        <div class="promotions__slider">
+          <div class="promotions__track">
+            <ul class="promotions__list">
+              <li class="promotions__item promotions-card">
+                <div class="promotions-card__badge">весь декабрь</div>
+                <div class="promotions-card__img">
+                  <picture>
+                    <source srcset="img/promotions-1.webp" type="image/webp">
+                    <img src="img/promotions-1.jpg" width="418" height="299" alt="Акция">
+                  </picture>
+                </div>
+                <p class="promotions-card__text">Оклейка капота гибридной пленкой
+                  за <span class="accent">12 000 руб.</span></p>
+              </li>
+              <li class="promotions__item promotions-card">
+                <div class="promotions-card__badge">весь декабрь</div>
+                <div class="promotions-card__img">
+                  <picture>
+                    <source srcset="img/promotions-2.webp" type="image/webp">
+                    <img src="img/promotions-2.jpg" width="418" height="299" alt="Акция">
+                  </picture>
+                </div>
+                <p class="promotions-card__text">Оклейка защитной пленкой зон риска со <span class="accent">скидкой 10%</span></p>
+              </li>
+              <li class="promotions__item promotions-card">
+                <div class="promotions-card__badge">весь декабрь</div>
+                <div class="promotions-card__img">
+                  <picture>
+                    <source srcset="img/promotions-3.webp" type="image/webp">
+                    <img src="img/promotions-3.jpg" width="418" height="299" alt="Акция">
+                  </picture>
+                </div>
+                <p class="promotions-card__text">Полировка автомобиля + нанесение керамики со <span class="accent">скидкой 3 000 руб.</span></p>
+              </li>
+              <li class="promotions__item promotions-card">
+                <div class="promotions-card__badge">весь декабрь</div>
+                <div class="promotions-card__img">
+                  <picture>
+                    <source srcset="img/promotions-2.webp" type="image/webp">
+                    <img src="img/promotions-2.jpg" width="418" height="299" alt="Акция">
+                  </picture>
+                </div>
+                <p class="promotions-card__text">Оклейка защитной пленкой зон риска со <span class="accent">скидкой 10%</span></p>
+              </li>
+              <li class="promotions__item promotions-card">
+                <div class="promotions-card__badge">весь декабрь</div>
+                <div class="promotions-card__img">
+                  <picture>
+                    <source srcset="img/promotions-3.webp" type="image/webp">
+                    <img src="img/promotions-3.jpg" width="418" height="299" alt="Акция">
+                  </picture>
+                </div>
+                <p class="promotions-card__text">Полировка автомобиля + нанесение керамики со <span class="accent">скидкой 3 000 руб.</span></p>
+              </li>
+            </ul>
+          </div>
+          <ul class="promotions__pagination splide__pagination"></ul>
+        </div>
+        <a class="promotions__btn btn-gradient" href="#">Все акции</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lead lead-contact section">
+  <div class="lead__wrapper">
+    <div class="container">
+      <div class="lead__inner lead-contact__inner">
+        <div class="lead-contact__content">
+          <div class="lead-contact__title title title--icon">
+            <h2 class="title__wrapper">Оставить <span class="break"></span> <span class="secondary">заявку</span></h2>
+          </div>
+          <div class="lead__form lead-form">
+            <p class="lead-form__title">Запишитесь на консультацию обсудим план работ над автомобилем вместе</p>
+            <form>
+              <div class="lead-form__inner">
+                <input class="lead-form__control form-control" type="text" placeholder="Ваше имя">
+                <input class="lead-form__control form-control" type="tel" placeholder="Номер телефона +7">
+                <button class="lead-form__btn btn-gradient">Отправить</button>
+                <label class="lead-form__policy form-check">
+                  <input class="visually-hidden" checked type="checkbox">
+                  <span class="form-check__circle"></span>
+                  <span>Даю согласие <a href="#">на обработку персональных данных</a></span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="lead-contact__media">
+          <video src="video/lead-video.mp4" poster="img/lead-poster.jpg" autoplay playsinline muted loop></video>
+        </div>
+      </div>
+    </div>
+    <div class="lead__bg"></div>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <div class="contacts__inner">
+    <div class="contacts__container">
+      <div class="contacts__content">
+        <div class="contacts__title title title--icon">
+          <h3 class="title__wrapper">Как нас <span class="break"></span> <span class="secondary"> найти?</span></h3>
+        </div>
+        <ul class="contacts__info contacts-info">
+          <li class="contacts__info-item contacts-info__item">
+            <i class="icon icon-phone"></i>
+            <a href="tel:+78312119483">+7 (831) 211-94-83</a>
+          </li>
+          <li class="contacts__info-item contacts-info__item">
+            <i class="icon icon-email"></i>
+            <a href="mailto:deteiling-nn@yandex.ru">deteiling-nn@yandex.ru</a>
+          </li>
+          <li class="contacts__info-item contacts-info__item">
+            <i class="icon icon-location"></i>
+            <span>Нижний Новгород, ул.&nbsp;Родионова 190Д</span>
+          </li>
+          <li class="contacts__info-item contacts-info__item">
+            <i class="icon icon-clock"></i>
+            <span><b>Без выходных:</b> c 10:00 до 20:00</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contacts__map">
+      <a href="https://yandex.kz/maps/ru/47/nizhny-novgorod/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Нижний Новгород</a>
+      <a href="https://yandex.kz/maps/ru/47/nizhny-novgorod/house/ulitsa_rodionova_190d/YE0YdgBpTUMOQFtsfX9xdnVrYg==/?indoorLevel=1&ll=44.079468%2C56.307986&utm_medium=mapframe&utm_source=maps&z=17.06" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Родионова, 190Д — Яндекс Карты</a>
+      <iframe src="https://yandex.kz/map-widget/v1/?indoorLevel=1&ll=44.079468%2C56.307986&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njk5NjQxNRJR0KDQvtGB0YHQuNGPLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCwg0YPQu9C40YbQsCDQoNC-0LTQuNC-0L3QvtCy0LAsIDE5MNCUIgoNX1EwQhVgO2FC&z=17.06" width="1920" height="600" frameborder="1" allowfullscreen="true">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+      </main>
+      
+        <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__info">
+        <div class="footer__info-row">
+          <div class="footer__info-col">
+            <a class="footer__logo" href="#">
+              <img src="img/about-logo.svg" width="175" height="166" alt="Lucky Duck">
+            </a>
+          </div>
+          <div class="footer__info-col">
+            <div class="footer__contacts">
+              <ul class="footer__info-contacts contacts-info">
+                <li class="footer__contacts-item contacts-info__item">
+                  <i class="icon icon-phone"></i>
+                  <a href="tel:+78312119483">+7 (831) 211-94-83</a>
+                  <ul class="footer__contacts-socials">
+                    <li><a href="#"><img src="img/whatsapp-icon.svg" width="38" height="38" alt="Связаться в Whatsapp" title="Связаться в Whatsapp"></a></li>
+                    <li><a href="#"><img src="img/telegram-icon.svg" width="38" height="38" alt="Связаться в Telegram" title="Связаться в Telegram"></a></li>
+                  </ul>
+                </li>
+                <li class="footer__contacts-item contacts-info__item">
+                  <i class="icon icon-email"></i>
+                  <a href="mailto:deteiling-nn@yandex.ru">deteiling-nn@yandex.ru</a>
+                </li>
+                <li class="footer__contacts-item contacts-info__item">
+                  <i class="icon icon-location"></i>
+                  <span>Нижний Новгород, ул.&nbsp;Родионова 190Д</span>
+                </li>
+                <li class="footer__contacts-item contacts-info__item">
+                  <i class="icon icon-clock"></i>
+                  <span><b>Без выходных:</b> c 10:00 до 20:00</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copy">
+          <p>2023 © Все права защищены.</p>
+          <p>Разработано Seo-Paul</p>
+        </div>
+      </div>
+      <nav class="footer__nav">
+        <div class="footer__nav-col">
+          <p class="footer__title">Информация</p>
+          <ul class="footer__list">
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Портфолио</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-col">
+          <p class="footer__title">УСЛУГИ</p>
+          <ul class="footer__list footer__list--row">
+            <li><a href="#">Полировка</a></li>
+            <li><a href="#">Химчистка</a></li>
+            <li><a href="#">Детейлинг-мойка</a></li>
+            <li><a href="#">Нанесение керамики</a></li>
+            <li><a href="#">Шумоизоляция</a></li>
+            <li><a href="#">Оклейка пленкой</a></li>
+            <li><a href="#">Удаление вмятин</a></li>
+            <li><a href="#">Установка доводчиков дверей</a></li>
+            <li><a href="#">Установка системы ТОР для звука выхлопа</a></li>
+            <li><a href="#">Установка музыки</a></li>
+            <li><a href="#">Ионизация салона (установка системы)</a></li>
+            <li><a href="#">Установка подсветки салона</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+      <div class="modal modal-main" id="modal-form" aria-hidden="true">
+  <div class="modal__wrapper">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <div class="modal__title title title--icon">
+          <h5 class="title__wrapper">Оставить <span class="break"></span> <span class="secondary">заявку</span></h5>
+        </div>
+        <div class="modal__form">
+          <form>
+            <div class="modal__form-inner">
+              <input class="modal__control form-control" type="text" placeholder="Ваше имя">
+              <input class="modal__control form-control" type="tel" placeholder="Номер телефона +7">
+              <button class="modal__btn btn-gradient">отправить</button>
+              <label class="modal__policy form-check">
+                <input class="visually-hidden" checked type="checkbox">
+                <span class="form-check__circle"></span>
+                <span>Даю согласие <a href="#">на обработку персональных данных</a></span>
+              </label>
+            </div>
+          </form>
+          <div class="modal__img">
+            <img src="img/modal-1.png" width="190" height="164" alt="Письмо">
+          </div>
+        </div>
+      </div>
+      <button class="modal__close" data-modal-close></button>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/vendor.js"></script>
+<script src="js/splide.min.js"></script>
+<script src="js/interact.min.js"></script>
+<script src="js/main.js"></script>
+
+    
+  </body>
+</html>

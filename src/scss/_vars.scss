@@ -1,0 +1,30 @@
+// root
+:root {
+  --content-width: 1440px;
+  --container-offset: 24px;
+  --container-width: calc(var(--content-width) + var(--container-offset) * 2);
+  --window-height: 100%;
+  --header-height: 100px;
+}
+
+// font
+$font: "Play", sans-serif;
+$font-secondary: "Unbounded", sans-serif;
+
+// transitions
+$transition: 0.25s ease-in-out;
+$menu-transition: 0.35s ease-in-out;
+$menu-breakpoint: 1279px;
+
+// colors
+$primary: #15b39b;
+$secondary: #5b8df4;
+$white: #f6f9ff;
+$black: #121c29;
+$accent: #ff9906;
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --container-offset: 16px;
+  }
+}

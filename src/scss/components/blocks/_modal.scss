@@ -1,0 +1,180 @@
+.modal {
+  $transition: opacity 0.3s ease-out;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba($black, 0.8);
+  opacity: 0;
+  transition: $transition;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: var(--container-offset);
+    width: 100%;
+    height: var(--window-height);
+  }
+
+  &__inner {
+    position: relative;
+    overflow: auto;
+    margin: auto;
+    border-radius: 10px;
+    padding: 33px 30px 49px 52px;
+    width: 100%;
+    max-width: 585px;
+    color: $black;
+    background-color: $white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 48px;
+      bottom: 56px;
+      width: 214px;
+      height: 20px;
+      background: url("../img/stars-line.svg") center / cover no-repeat;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    outline: transparent;
+    border: none;
+    width: 29px;
+    height: 29px;
+    box-shadow: none;
+    background: url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.5 1.61111C7.38166 1.61111 1.61111 7.38166 1.61111 14.5C1.61111 21.6183 7.38166 27.3889 14.5 27.3889C21.6183 27.3889 27.3889 21.6183 27.3889 14.5C27.3889 7.38166 21.6183 1.61111 14.5 1.61111ZM0 14.5C0 6.49187 6.49187 0 14.5 0C22.5081 0 29 6.49187 29 14.5C29 22.5081 22.5081 29 14.5 29C6.49187 29 0 22.5081 0 14.5ZM9.82205 9.82205C10.1366 9.50746 10.6467 9.50746 10.9613 9.82205L14.5 13.3608L18.0387 9.82205C18.3533 9.50746 18.8634 9.50746 19.1779 9.82205C19.4925 10.1366 19.4925 10.6467 19.1779 10.9613L15.6392 14.5L19.1779 18.0387C19.4925 18.3533 19.4925 18.8634 19.1779 19.1779C18.8634 19.4925 18.3533 19.4925 18.0387 19.1779L14.5 15.6392L10.9613 19.1779C10.6467 19.4925 10.1366 19.4925 9.82205 19.1779C9.50746 18.8634 9.50746 18.3533 9.82205 18.0387L13.3608 14.5L9.82205 10.9613C9.50746 10.6467 9.50746 10.1366 9.82205 9.82205Z' fill='%23879EBC'/%3E%3C/svg%3E%0A") center no-repeat;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-size: 32px;
+
+    &::after {
+      top: 0;
+      width: 84px;
+      height: 80px;
+    }
+  }
+
+  &__control {
+    margin-bottom: 15px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 305fr 190fr;
+    gap: 8px;
+  }
+
+  &__btn {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  &__policy {
+    max-width: 230px;
+  }
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  &[aria-hidden="false"] {
+    display: block;
+  }
+
+  &.is-open {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .modal {
+    &__inner::after {
+      bottom: 30px;
+    }
+
+    &__title {
+      font-size: 30px;
+
+      &::after {
+        top: 0;
+        width: 78px;
+        height: 75px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .modal {
+    &__inner {
+      padding: 30px 30px 30px 44px;
+    }
+
+    &__title {
+      font-size: 26px;
+
+      &::after {
+        top: 0;
+        width: 66px;
+        height: 63px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    &__inner {
+      padding: 40px 20px 30px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .modal {
+    &__form {
+      display: block;
+    }
+
+    &__img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      width: 100px;
+    }
+
+    &__policy {
+      text-shadow: 0 0 1px $white;
+    }
+
+    &__form-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    &__title {
+      .break {
+        display: block;
+      }
+    }
+  }
+}

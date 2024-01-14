@@ -1,0 +1,124 @@
+.info {
+  &__wrapper {
+    @include wrapper;
+  }
+
+  &__bg {
+    @include circle(424px, $secondary, 0.5, 137px);
+
+    content: "";
+    position: absolute;
+    right: -145px;
+    top: -20px;
+    z-index: -1;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__row {
+    @include grid(2, 54px);
+  }
+
+  &__col {
+    p {
+      @include mb(18px);
+    }
+
+    ol,
+    ul {
+      @include mb(20px);
+    }
+
+    ul {
+      li {
+        position: relative;
+        padding-left: 28px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 19px;
+          height: 20px;
+          background: url("data:image/svg+xml,%3Csvg width='19' height='20' viewBox='0 0 19 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 9.99608C16.4804 9.99608 14.0641 11.0501 12.2825 12.9262C10.5009 14.8023 9.5 17.3468 9.5 20C9.5 17.3468 8.49911 14.8023 6.71751 12.9262C4.93592 11.0501 2.51956 9.99608 0 9.99608C2.51812 9.99557 4.93307 8.9425 6.71435 7.0682C8.49562 5.19391 9.49754 2.65169 9.5 0C9.50246 2.65169 10.5044 5.19391 12.2857 7.0682C14.0669 8.9425 16.4819 9.99557 19 9.99608Z' fill='%2315B39B'/%3E%3C/svg%3E%0A") center / cover no-repeat;
+        }
+      }
+    }
+
+    ol {
+      counter-reset: ol;
+
+      li {
+        counter-increment: ol;
+        display: flex;
+        align-items: flex-start;
+
+        &::before {
+          content: counter(ol);
+          flex-shrink: 0;
+          margin-right: 14px;
+          width: 20px;
+          font-family: $font-secondary;
+          font-weight: 700;
+          font-size: 24px;
+          color: $primary;
+        }
+      }
+    }
+
+    li {
+      @include mb(10px);
+    }
+  }
+
+  &__badge {
+    border: 1px solid rgba(21, 179, 155, 50%);
+    border-radius: 10px;
+    padding: 27px 18px 27px 35px;
+    background: linear-gradient(90deg, rgba(21, 179, 155, 20%) 9.06%, rgba(21, 179, 155, 7%) 104.27%);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .info__bg {
+    right: -100px;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .info {
+    &__row {
+      gap: 46px;
+    }
+
+    &__bg {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .info {
+    &__row {
+      display: block;
+    }
+
+    &__col {
+      @include mb(20px);
+
+      ol li::before {
+        width: 12px;
+        font-size: 20px;
+      }
+    }
+
+    &__badge {
+      padding: 24px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.gallery {
+  &__wrapper {
+    @include wrapper;
+
+    &::before {
+      @include circle(454px, $primary, 0.3, 78px);
+
+      content: "";
+      position: absolute;
+      left: -85px;
+      top: 384px;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    &::after {
+      top: -11px;
+    }
+  }
+
+  &__track {
+    margin-bottom: 33px;
+  }
+
+  &__item {
+    img {
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .gallery__wrapper::before {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    &__list {
+      @include grid(2, 20px);
+    }
+
+    &__item {
+      &:nth-child(4) ~ .gallery__item {
+        display: none;
+      }
+    }
+
+    &__btn {
+      display: inline-block;
+    }
+  }
+}

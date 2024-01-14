@@ -1,0 +1,291 @@
+.services {
+  &__wrapper {
+    @include wrapper;
+
+    &::before {
+      @include circle(424px, $secondary, 0.5, 137px);
+
+      content: "";
+      position: absolute;
+      left: -95px;
+      top: 530px;
+      z-index: -1;
+    }
+
+    &::after {
+      @include circle(556px, $primary, 0.3, 79px);
+
+      content: "";
+      position: absolute;
+      right: -195px;
+      top: 55px;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    margin-bottom: 38px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(21, 179, 155, 50%);
+    border-radius: 10px;
+    min-height: 400px;
+    background: linear-gradient(89deg, rgba(21, 179, 155, 20%) 4.79%, rgba(21, 179, 155, 7%) 104.94%);
+
+    &:nth-child(5) {
+      grid-row: span 2;
+    }
+
+    &:nth-child(7) {
+      grid-column: span 2;
+    }
+
+    &:nth-child(11),
+    &:nth-child(12) {
+      grid-column: span 2;
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    height: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $transition;
+    }
+
+    @include hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 23px 36px 40px;
+    height: 50%;
+  }
+
+  &__name {
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #72a0ff;
+
+    span {
+      font-size: 24px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 1336px) {
+  .services {
+    &__wrapper {
+      &::before,
+      &::after {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    &__list {
+      gap: 20px;
+    }
+
+    &__item {
+      min-height: 370px;
+    }
+
+    &__info {
+      padding: 20px 23px 30px;
+    }
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .services {
+    &__title::after {
+      top: 0;
+    }
+
+    &__wrapper {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__price {
+      span {
+        font-size: 22px;
+      }
+    }
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__img {
+      position: relative;
+      padding-bottom: 57.18%;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &__item {
+      &:nth-child(5) {
+        grid-row: auto;
+      }
+
+      &:nth-child(7) {
+        grid-column: auto;
+      }
+
+      &:nth-child(11),
+      &:nth-child(12) {
+        grid-column: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .services {
+    &__img {
+      height: auto;
+    }
+
+    &__info {
+      height: auto;
+    }
+
+    &__name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      font-size: 16px;
+    }
+
+    &__price {
+      font-size: 16px;
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+    &__item {
+      min-height: 330px;
+      text-align: center;
+    }
+
+    &__buttons {
+      justify-content: center;
+      margin-top: auto;
+    }
+
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    &__name {
+      min-height: 32px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .services {
+    &__info {
+      padding: 20px;
+    }
+
+    &__buttons {
+      flex-direction: column;
+    }
+
+    &__btn {
+      margin-right: 0;
+      margin-bottom: 13px;
+      min-width: 130px;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .services {
+    &__item {
+      min-height: auto;
+    }
+
+    &__name {
+      margin-bottom: 6px;
+      min-height: 48px;
+    }
+
+    &__price {
+      font-size: 12px;
+
+      span {
+        font-size: 16px;
+      }
+    }
+
+    &__btn {
+      min-width: auto;
+    }
+
+    &__list {
+      gap: 12px;
+    }
+
+    &__info {
+      padding: 20px 4px;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.benefits {
+  &__list {
+    @include grid(3, 26px);
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__img {
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #5b8df4;
+  }
+
+  &__text {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .benefits {
+    padding: 45px 0;
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__text {
+      padding: 0;
+    }
+
+    &__img {
+      img {
+        width: 120px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .benefits {
+    &__list {
+      display: block;
+    }
+
+    &__item {
+      margin: 0 auto 32px;
+      max-width: 300px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+  }
+}

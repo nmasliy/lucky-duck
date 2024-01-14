@@ -1,0 +1,474 @@
+.lead {
+  &__wrapper {
+    @include wrapper;
+
+    &::before {
+      @include circle(409px, $primary, 0.3, 79px);
+
+      content: "";
+      position: absolute;
+      left: -104px;
+      top: 168px;
+      z-index: -1;
+    }
+
+    &::after {
+      @include circle(424px, $secondary, 0.5, 137px);
+
+      content: "";
+      position: absolute;
+      right: -110px;
+      top: -192px;
+      z-index: -1;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 60px 78px;
+    max-width: 1235px;
+    color: $black;
+    background: $white url("../img/stars-decor.svg") top 91px right 298px no-repeat;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+  }
+
+  &__title {
+    margin-bottom: 36px;
+  }
+
+  &__text {
+    margin-bottom: 44px;
+    font-size: 32px;
+  }
+
+  &__phone {
+    border-bottom: 1px solid transparent;
+    font-weight: 700;
+    transition: border-bottom-color $transition;
+
+    @include hover {
+      border-bottom-color: $black;
+    }
+  }
+
+  &__text-socials {
+    display: flex;
+
+    ul {
+      display: flex;
+      align-items: center;
+      margin-top: -5px;
+      margin-left: 15px;
+
+      li {
+        @include mr(15px);
+      }
+
+      a {
+        display: block;
+        transition: transform $transition;
+
+        @include hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  &__caption {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -175px;
+      top: -57px;
+      width: 166px;
+      height: 105px;
+      background: url("data:image/svg+xml,%3Csvg width='166' height='105' viewBox='0 0 166 105' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.756389 68.2443C0.147319 69.4834 0.658068 70.9816 1.89718 71.5907C3.13629 72.1998 4.63454 71.689 5.24361 70.4499L0.756389 68.2443ZM115.504 8.64686C114.205 9.11311 113.529 10.5446 113.995 11.8442L121.593 33.0225C122.06 34.3221 123.491 34.9977 124.791 34.5314C126.09 34.0652 126.766 32.6337 126.3 31.334L119.546 12.5089L138.371 5.75508C139.67 5.28882 140.346 3.85731 139.88 2.55771C139.414 1.2581 137.982 0.58254 136.682 1.04879L115.504 8.64686ZM5.24361 70.4499C8.30662 64.2184 12.8522 60.6612 18.5835 59.1568C24.4325 57.6215 31.7335 58.1732 40.2405 60.688C57.2638 65.7203 78.1889 78.3312 99.8284 95.2537L102.908 91.315C81.1061 74.2652 59.5879 61.1934 41.658 55.8931C32.6883 53.2416 24.3852 52.4646 17.314 54.3206C10.1251 56.2076 4.43437 60.7617 0.756389 68.2443L5.24361 70.4499ZM99.8284 95.2537C122.936 113.324 151.169 102.788 161.467 82.0777C166.655 71.6441 167.293 58.6838 160.688 45.6008C154.109 32.5707 140.456 19.6127 117.415 8.73912L115.281 13.2609C137.68 23.8311 150.304 36.127 156.224 47.8542C162.118 59.5284 161.477 70.8285 156.99 79.8516C147.939 98.0551 123.243 107.217 102.908 91.315L99.8284 95.2537Z' fill='%2315B39B' fill-opacity='0.5'/%3E%3C/svg%3E%0A") center / cover no-repeat;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: -116px;
+    top: -71px;
+    width: 720px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__bg {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 214px;
+      height: 221px;
+      background: url("../img/stars-decor.svg") center / cover no-repeat;
+    }
+
+    &::before {
+      left: 98px;
+      top: 0;
+    }
+
+    &::after {
+      right: 98px;
+      bottom: 0;
+    }
+  }
+}
+
+.lead-contact {
+  .lead__wrapper {
+    &::before {
+      top: -30px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    .break {
+      display: block;
+    }
+  }
+
+  &__media {
+    @include flex-center;
+
+    margin: -45px -62px -45px 0;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 75fr 50fr;
+    overflow: hidden;
+    background: $white;
+    gap: 10px;
+  }
+}
+
+.lead-form {
+  &__title {
+    position: relative;
+    margin-bottom: 26px;
+    padding-left: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      bottom: 5px;
+      border-radius: 6px;
+      width: 3px;
+      background-color: $primary;
+    }
+  }
+
+  &__policy {
+    align-items: center;
+    align-self: center;
+    margin: 0 auto;
+    max-width: 227px;
+  }
+
+  &__inner {
+    @include grid(2, 12px);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .lead {
+    &__wrapper {
+      &::before,
+      &::after {
+        width: 300px;
+        height: 300px;
+      }
+
+      &::before {
+        left: -100px;
+      }
+
+      &::after {
+        right: -100px;
+      }
+    }
+
+    &__bg {
+      &::before {
+        left: 12px;
+      }
+
+      &::after {
+        right: 12px;
+      }
+    }
+
+    &__img {
+      width: 670px;
+    }
+
+    &__text {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1336px) {
+  .lead {
+    &__text {
+      font-size: 26px;
+    }
+
+    &__img {
+      right: -99px;
+      top: -44px;
+      width: 630px;
+    }
+
+    &__caption {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .lead {
+    padding-top: 8px;
+
+    &__wrapper {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &__inner {
+      background-size: 168px;
+    }
+
+    &__bg {
+      display: none;
+    }
+
+    &__text-socials {
+      ul {
+        margin-top: -10px;
+
+        img {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+
+    &__img {
+      right: -92px;
+      top: -24px;
+      width: 530px;
+    }
+  }
+
+  .lead-form {
+    &__title {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .lead {
+    &__text {
+      font-size: 22px;
+    }
+
+    &__caption {
+      font-size: 16px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__inner {
+      padding: 40px 32px;
+      background-position: top 51px right 198px;
+    }
+
+    &__img {
+      right: -48px;
+      width: 400px;
+    }
+  }
+
+  .lead-contact {
+    &__inner {
+      grid-template-columns: 76fr 50fr;
+    }
+
+    &__media {
+      margin: -30px -20px -30px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .lead {
+    &__title {
+      margin-bottom: 21px;
+    }
+
+    &__inner {
+      min-height: 388px;
+      background-position: top 77px right 14px;
+      background-size: 128px;
+    }
+
+    &__img {
+      top: 124px;
+      width: 342px;
+      max-width: 76%;
+    }
+
+    &__text {
+      margin-bottom: 0;
+      padding-right: 200px;
+      font-size: 18px;
+    }
+
+    &__text-socials {
+      display: block;
+
+      ul {
+        margin: 0;
+      }
+    }
+
+    &__caption {
+      margin: 20px 0 30px;
+      font-size: 14px;
+    }
+  }
+
+  .lead-contact {
+    &__content {
+      position: relative;
+      z-index: 1;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+
+      &::after {
+        top: 0;
+      }
+
+      .break {
+        display: none;
+      }
+    }
+
+    &__inner {
+      display: block;
+      min-height: 480px;
+    }
+
+    &__media {
+      position: absolute;
+      right: 8px;
+      bottom: 0;
+      margin: 0;
+      width: 62%;
+      max-width: 370px;
+    }
+  }
+
+  .lead-form {
+    &__inner {
+      display: block;
+      max-width: 250px;
+    }
+
+    &__control {
+      margin-bottom: 10px;
+      background-color: $white;
+    }
+
+    &__btn {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    &__policy {
+      align-self: flex-start;
+      margin: 0;
+      max-width: 110px;
+      font-size: 12px;
+    }
+
+    &__title {
+      padding-left: 16px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .lead {
+    &__text {
+      padding-right: 84px;
+      font-size: 14px;
+    }
+
+    &__caption {
+      font-size: 12px;
+    }
+
+    &__img {
+      top: 177px;
+    }
+
+    &__inner {
+      padding: 24px 16px;
+      background-position: right -50px top 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .lead-contact {
+    &__title {
+      &::after {
+        margin-left: 6px;
+      }
+
+      .title__wrapper {
+        min-width: 220px;
+      }
+    }
+  }
+}

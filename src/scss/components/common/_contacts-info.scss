@@ -1,0 +1,42 @@
+.contacts-info {
+  &__item {
+    display: flex;
+    align-items: center;
+
+    i {
+      flex-shrink: 0;
+      margin-right: 7px;
+    }
+
+    a {
+      border-bottom: 1px solid transparent;
+      font-weight: 700;
+      font-size: 18px;
+      transition: border-bottom-color $transition;
+
+      @include hover {
+        border-bottom-color: currentcolor;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contacts-info {
+    &__item {
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts-info {
+    font-size: 14px;
+
+    a {
+      font-size: 14px;
+    }
+  }
+}
