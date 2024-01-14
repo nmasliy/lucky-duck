@@ -84,6 +84,7 @@
   }
 
   &__policy {
+    align-items: center;
     max-width: 230px;
   }
 
@@ -138,6 +139,10 @@
 
 @media screen and (max-width: 768px) {
   .modal {
+    &__policy {
+      align-self: flex-start;
+    }
+
     &__inner {
       padding: 40px 20px 30px;
 
